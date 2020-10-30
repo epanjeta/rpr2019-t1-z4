@@ -28,6 +28,8 @@ public class Korpa {
             if(artikli[i].getKod().equals(kod) ){
                 Artikl pom = artikli[i];
                 artikli[i] = artikli[broj_artikala-1];
+                artikli[broj_artikala-1] = null;
+                broj_artikala--;
                 return pom;
             }
         }

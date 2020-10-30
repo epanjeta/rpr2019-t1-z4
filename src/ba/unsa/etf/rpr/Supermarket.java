@@ -20,8 +20,9 @@ public class Supermarket {
     public Artikl izbaciArtiklSaKodom(String kod) {
         for(int i=0; i<broj_artikala; i++){
             if(artikli[i].getKod().equals(kod)){
-                Artikl pom = artikli[i];
+                Artikl pom = new Artikl (artikli[i].getNaziv(), artikli[i].getCijena(), artikli[i].getKod());
                 artikli[i] = artikli[broj_artikala-1];
+                artikli[broj_artikala-1] = null;
                 broj_artikala--;
                 return pom;
             }
