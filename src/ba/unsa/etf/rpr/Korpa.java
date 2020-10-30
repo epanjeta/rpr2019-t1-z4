@@ -12,6 +12,7 @@ public class Korpa {
     public boolean dodajArtikl(Artikl a) {
         if(broj_artikala < 50){
             artikli[broj_artikala] = a;
+            broj_artikala++;
             return true;
         }
         return false;
@@ -36,6 +37,7 @@ public class Korpa {
     public int dajUkupnuCijenuArtikala() {
         int suma = 0;
         for(int i=0; i<broj_artikala; i++){
+            //System.out.println(artikli[i].getCijena());
             suma = suma + artikli[i].getCijena();
         }
         return suma;
